@@ -1,0 +1,37 @@
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0.8;
+}
+
+.play-icon:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  width: 400px;
+  aspect-ratio: 9 / 16; /* Establece la relación de aspecto 9:16 */
+  background-color: var(--color-secondary); /* Color de fondo en caso de que el video no cargue */
+  border-radius: 1.25rem;
+
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+
+}
