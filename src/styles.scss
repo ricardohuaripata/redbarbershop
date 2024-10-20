@@ -8,6 +8,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'photoswipe/dist/photoswipe.css';
+
 body {
   background-color: var(--color-secondary);
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;

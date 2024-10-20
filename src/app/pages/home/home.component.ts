@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   pictures: any[] = [
     {
       src: 'images/redbarbershop/picture3.jpg',
@@ -49,8 +51,21 @@ export class HomeComponent {
 
   videos: string[] = [
     'images/redbarbershop/reel1.mp4',
-    'images/redbarbershop/reel2.mp4'
-  ]
+    'images/redbarbershop/reel2.mp4',
+  ];
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#pswp-gallery',
+        children: 'a',
+        pswpModule: () => import('photoswipe'),
+      });
+      lightbox.init();
+    }
+  }
 
   play(videoElement: HTMLVideoElement) {
     if (videoElement.paused) {
