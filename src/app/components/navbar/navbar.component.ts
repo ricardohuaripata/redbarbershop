@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   navigationLinks: any[] = [
-    { label: 'SERVICIOS', url: '/' },
-    { label: 'RESEÑAS', url: '/' },
-    { label: 'UBICACIÓN', url: '/' },
-    { label: 'CONTACTO', url: '/' },
+    { label: 'SERVICIOS', url: '#services' },
+    { label: 'RESEÑAS', url: '#ratings' },
+    { label: 'UBICACIÓN', url: '#location' },
+    { label: 'CONTACTO', url: '#contact' },
   ];
 }

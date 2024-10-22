@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="flex justify-center flex-wrap gap-5 my-5 px-4">
+<div class="flex justify-center gap-4 my-10 px-4">
     @for (video of videos; track $index) {
     <div class="video-container">
         <video #videoElement preload="metadata" [playsInline]="true" [loop]="true" [src]="video"
@@ -21,7 +21,7 @@
         @if (videoElement.paused) {
         <!-- Ícono de play centrado -->
         <div class="play-icon" (click)="play(videoElement)">
-            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" fill="#ffffff" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 sm:w-16" width="4rem" fill="#ffffff" viewBox="0 0 16 16">
                 <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
             </svg>
@@ -29,5 +29,12 @@
         }
     </div>
     }
+
+</div>
+
+<div id="location" style="width: 100%" class="my-10"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Red%20BarberShop,%20Av.%20del%20Alcalde%20Manuel%20del%20Valle,%2046,%20Norte,%2041015%20Sevilla+(Red%20Barber%20Shop)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+
+<div id="services" class="flex justify-center my-10 px-4">
+    <img src="images/redbarbershop/servicios.jpg" alt="precios y servicios" width="480px" height="778px" class="services-image">
 
 </div>

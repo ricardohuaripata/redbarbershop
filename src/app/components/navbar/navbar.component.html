@@ -1,4 +1,4 @@
-<nav class="navbar-sticky w-full px-5 py-5 md:px-10 bg-secondary text-white">
+<nav class="navbar-sticky w-full px-5 py-5 md:px-10 text-white">
     <div class="relative flex flex-wrap gap-5 lg:gap-10 justify-between items-center">
 
         <a href="/">
@@ -6,7 +6,7 @@
                 class="rounded-lg">
         </a>
 
-        <ul class="hidden lg:flex gap-10 text-lg font-semibold">
+        <ul class="hidden lg:flex gap-10 text-xl font-semibold">
             @for (link of navigationLinks; track link) {
             <li> <a [href]="link.url">
                     <span>{{link.label}}</span>
@@ -40,7 +40,7 @@
         <span class="sr-only">Close menu</span>
     </button>
     <div class="py-4 overflow-y-auto">
-        <ul class="space-y-2 text-lg font-semibold">
+        <ul class="space-y-2 text-xl font-semibold">
             @for (link of navigationLinks; track link) {
             <li> <a [href]="link.url" class="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:text-black">
                     <span>{{link.label}}</span>

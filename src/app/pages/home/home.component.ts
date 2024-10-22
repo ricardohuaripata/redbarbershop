@@ -47,6 +47,12 @@ export class HomeComponent implements OnInit {
       width: 382,
       height: 510,
     },
+    {
+      src: 'images/redbarbershop/picture7.jpg',
+      alt: 'banner picture 7',
+      width: 287,
+      height: 510,
+    },
   ];
 
   videos: string[] = [
