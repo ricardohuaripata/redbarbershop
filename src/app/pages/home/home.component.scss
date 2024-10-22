@@ -23,7 +23,6 @@
   aspect-ratio: 9 / 16; /* Establece la relación de aspecto 9:16 */
   background-color: var(--color-secondary); /* Color de fondo en caso de que el video no cargue */
   border-radius: 1.25rem;
-
 }
 
 .video-container video {
@@ -33,11 +32,21 @@
   width: 100%;
   object-fit: cover;
   border-radius: 1.25rem;
-
 }
 
 .services-image {
   border-radius: 1.25rem;
   border: 5px solid var(--color-primary);
+}
 
+.form-input {
+  @apply p-2 rounded-md w-full;
+}
+
+.form-button {
+  @apply p-3 rounded-md text-xl font-semibold w-full text-white bg-primary;
+}
+
+form {
+  width: 32rem
 }

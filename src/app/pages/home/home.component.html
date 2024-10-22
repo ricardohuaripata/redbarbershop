@@ -34,7 +34,34 @@
 
 <div id="location" style="width: 100%" class="my-10"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Red%20BarberShop,%20Av.%20del%20Alcalde%20Manuel%20del%20Valle,%2046,%20Norte,%2041015%20Sevilla+(Red%20Barber%20Shop)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
 
-<div id="services" class="flex justify-center my-10 px-4">
-    <img src="images/redbarbershop/servicios.jpg" alt="precios y servicios" width="480px" height="778px" class="services-image">
+<div class="my-10 px-4">
+    <div class="flex justify-center flex-wrap gap-7">
+        <img id="services" src="images/redbarbershop/servicios.jpg" alt="precios y servicios" width="480px" height="778px"
+            class="services-image">
+        <form id="contact">
+            <h2 class="text-white text-4xl sm:text-5xl text-center lg:text-left font-bold mb-7">Contacto</h2>
+
+            <div class="mb-5">
+                <input type="text" placeholder="Nombre" class="form-input" required>
+            </div>
+
+            <div class="mb-5">
+                <input type="text" placeholder="Asunto" class="form-input" required>
+            </div>
+
+            <div class="mb-5">
+                <input type="text" placeholder="Email" class="form-input" required>
+            </div>
+
+            <div class="mb-5">
+                <textarea name="" placeholder="Escribe tu mensaje" class="form-input min-h-40" required></textarea>
+            </div>
+
+            <div class="mb-5">
+                <button type="submit" class="form-button">ENVIAR</button>
+            </div>
+
+        </form>
+    </div>
 
 </div>
